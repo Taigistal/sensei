@@ -10,6 +10,7 @@ import { __ } from '@wordpress/i18n';
 import { useBlockIndex } from '../../../shared/blocks/block-index';
 import { useHasSelected } from '../../../shared/helpers/blocks';
 import types from '../answer-blocks';
+import QuestionSettings from './question-settings';
 import { QuestionTypeToolbar } from './question-type-toolbar';
 
 /**
@@ -80,6 +81,7 @@ const QuestionEdit = ( props ) => {
 					/>
 				</>
 			</BlockControls>
+			<QuestionSettings { ...props } />
 		</div>
 	);
 };
