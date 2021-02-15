@@ -1,5 +1,9 @@
 import { __ } from '@wordpress/i18n';
 import { applyFilters } from '@wordpress/hooks';
+import {
+	QuestionAnswerFeedbackSettings,
+	QuestionGradingNotesSettings,
+} from '../question-block/settings';
 import GapFillAnswer from './gap-fill';
 import MultiLineAnswer from './multi-line';
 import MultipleChoiceAnswer from './multiple-choice';
@@ -24,6 +28,7 @@ const questionTypes = {
 		title: __( 'Multiple Choice', 'sensei-lms' ),
 		description: __( 'Select from a list of options.', 'sensei-lms' ),
 		edit: MultipleChoiceAnswer,
+		settings: [ QuestionAnswerFeedbackSettings ],
 	},
 	truefalse: {
 		title: __( 'True / False', 'sensei-lms' ),
@@ -32,11 +37,13 @@ const questionTypes = {
 			'sensei-lms'
 		),
 		edit: TrueFalseAnswer,
+		settings: [ QuestionAnswerFeedbackSettings ],
 	},
 	gap: {
 		title: __( 'Gap Fill', 'sensei-lms' ),
 		description: __( 'Fill in the blank.', 'sensei-lms' ),
 		edit: GapFillAnswer,
+		settings: [ QuestionAnswerFeedbackSettings ],
 	},
 	'single-line': {
 		title: __( 'Single-line', 'sensei-lms' ),
@@ -45,6 +52,7 @@ const questionTypes = {
 			'sensei-lms'
 		),
 		edit: SingleLineAnswer,
+		settings: [ QuestionGradingNotesSettings ],
 	},
 	'multi-line': {
 		title: __( 'Multi-line', 'sensei-lms' ),
@@ -53,11 +61,13 @@ const questionTypes = {
 			'sensei-lms'
 		),
 		edit: MultiLineAnswer,
+		settings: [ QuestionGradingNotesSettings ],
 	},
 	'file-upload': {
 		title: __( 'File Upload', 'sensei-lms' ),
 		description: __( 'Upload a file or document.', 'sensei-lms' ),
 		edit: () => <div> [File Upload] </div>,
+		settings: [ QuestionGradingNotesSettings ],
 	},
 };
 
