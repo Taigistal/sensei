@@ -4,13 +4,13 @@
 	"require-dev": {
 		"php": "^5.4 || ^7",
 		"phpunit/phpunit": "6.5.14",
-		"dealerdirect/phpcodesniffer-composer-installer": "0.7.0",
-		"phpcompatibility/phpcompatibility-wp": "2.1.0",
-		"squizlabs/php_codesniffer": "3.5.5",
+		"dealerdirect/phpcodesniffer-composer-installer": "0.7.1",
+		"phpcompatibility/phpcompatibility-wp": "2.1.1",
+		"squizlabs/php_codesniffer": "3.5.8",
 		"wp-coding-standards/wpcs": "2.3.0",
-		"sirbrillig/phpcs-variable-analysis": "2.8.3",
+		"sirbrillig/phpcs-variable-analysis": "2.10.2",
 		"sirbrillig/phpcs-no-get-current-user": "1.0.1",
-		"swaggest/json-schema": "0.12.29"
+		"swaggest/json-schema": "0.12.31"
 	},
 	"prefer-stable": true,
 	"archive": {
